@@ -1,0 +1,57 @@
+{
+  "name": "leowebguy/masked-fields",
+  "description": "A mix of masked/validated fields for Craft",
+  "keywords": [
+    "craftcms",
+    "masked",
+    "fields",
+    "mask",
+    "validation"
+  ],
+  "version": "1.0.0",
+  "type": "craft-plugin",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Leo",
+      "homepage": "https://github.com/leowebguy"
+    }
+  ],
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "require": {
+    "craftcms/cms": "^4.0"
+  },
+  "require-dev": {
+    "craftcms/ecs": "dev-main",
+    "craftcms/phpstan": "dev-main",
+    "craftcms/rector": "dev-main"
+  },
+  "autoload": {
+    "psr-4": {
+      "leowebguy\\maskedfields\\": "src/"
+    }
+  },
+  "extra": {
+    "name": "Masked Fields",
+    "handle": "masked-fields",
+    "hasCpSection": false,
+    "hasCpSettings": false,
+    "class": "leowebguy\\maskedfields\\Plugin"
+  },
+  "config": {
+    "platform": {
+      "php": "8.0.2"
+    },
+    "allow-plugins": {
+      "yiisoft/yii2-composer": true,
+      "craftcms/plugin-installer": true
+    }
+  },
+  "scripts": {
+    "check-cs": "vendor/bin/ecs check src --ansi",
+    "fix-cs": "vendor/bin/ecs check src --ansi --fix",
+    "phpstan": "vendor/bin/phpstan analyse src",
+    "rector": "vendor/bin/rector process src --config vendor/craftcms/rector/sets/craft-cms-40.php"
+  }
+}

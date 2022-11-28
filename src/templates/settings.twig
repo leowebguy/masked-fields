@@ -1,0 +1,10 @@
+{% import '_includes/forms' as forms %}
+
+{{ forms.selectField({
+    label: 'Mask Type'|t,
+    instructions: 'Select mask to be applied to this field'|t,
+    id: 'type',
+    name: 'type',
+    options: types,
+    value: field.type|default('phoneus')
+}) }}

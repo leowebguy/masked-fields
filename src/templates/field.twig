@@ -1,0 +1,8 @@
+{% import "_includes/forms" as forms %}
+
+{{ forms.text({
+    class: type ~ '-mask',
+    name: name,
+    value: value,
+    placeholder: '',
+}) }}
