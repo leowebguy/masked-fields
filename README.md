@@ -15,3 +15,11 @@ On your Control Panel, go to Settings → Plugins → "Masked Fields" → Instal
 
 ### Usage
 
+![Screenshot](resources/masked1.png)
+
+![Screenshot](resources/masked2.png)
+
+### New formats
+
+PR into https://github.com/leowebguy/masked-fields
+following https://igorescobar.github.io/jQuery-Mask-Plugin patterns/schema

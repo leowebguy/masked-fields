@@ -20,10 +20,6 @@ class Assets extends AssetBundle
         $this->sourcePath = '@leowebguy/maskedfields/assets';
         $this->depends = [CpAsset::class];
 
-        //$this->css = [
-        //    'css/cp.css'
-        //];
-
         $this->js = [
             'js/jquery.mask.min.js',
             'js/cp.js'

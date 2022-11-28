@@ -90,7 +90,7 @@ class MaskedField extends PlainText implements PreviewableFieldInterface
     /**
      * @inheritdoc
      */
-    public function getInputHtml($value, ElementInterface $element = null): string
+    public function getInputHtml(mixed $value, ElementInterface $element = null): string
     {
         $type = $this->type;
 
