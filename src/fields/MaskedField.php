@@ -15,6 +15,9 @@ use craft\base\ElementInterface;
 use craft\base\PreviewableFieldInterface;
 use craft\fields\PlainText;
 
+/**
+ * @property-read null|string $settingsHtml
+ */
 class MaskedField extends PlainText implements PreviewableFieldInterface
 {
     // Public Methods
@@ -47,9 +50,10 @@ class MaskedField extends PlainText implements PreviewableFieldInterface
             'zip' => 'Zip Code',
             'cep' => 'Cep',
             'ip' => 'IP',
+            'itin' => 'ITIN',
+            'ssn' => 'SSN',
             'cnpj' => 'CNPJ',
             'cpf' => 'CPF',
-            'itin' => 'ITIN',
         ];
 
         parent::__construct($config);
@@ -90,7 +94,7 @@ class MaskedField extends PlainText implements PreviewableFieldInterface
     /**
      * @inheritdoc
      */
-    public function getInputHtml(mixed $value, ElementInterface $element = null): string
+    public function getInputHtml(mixed $value, ?ElementInterface $element = null): string
     {
         $type = $this->type;
 

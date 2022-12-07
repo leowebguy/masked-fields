@@ -6,9 +6,11 @@
     "masked",
     "fields",
     "mask",
-    "validation"
+    "formatting",
+    "validation",
+    "cp"
   ],
-  "version": "1.0.0",
+  "version": "1.0.1",
   "type": "craft-plugin",
   "license": "MIT",
   "authors": [

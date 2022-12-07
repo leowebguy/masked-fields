@@ -19,9 +19,6 @@ use leowebguy\maskedfields\fields\MaskedField;
 use yii\base\Event;
 use craft\services\Fields;
 
-/*
- * Class MixManifest
- */
 class Plugin extends BasePlugin
 {
     // Properties
