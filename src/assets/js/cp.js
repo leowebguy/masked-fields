@@ -5,7 +5,9 @@
             f.addClass('valid')
         },
         onKeyPress: (v, e, f, options) => {
-            if (!v) { return }
+            if (!v) {
+                return
+            }
             //console.log('A key was pressed!:', v, ' event: ', e, 'currentField: ', currentField, ' options: ', options)
             //console.log('onKeyPress')
             f.removeClass('valid')
@@ -18,7 +20,9 @@
         //     console.log('onChange');
         // },
         onInvalid: (v, e, f, invalid, options) => {
-            if (!v) { return }
+            if (!v) {
+                return
+            }
             //var error = invalid[0]
             //console.log('Digit: ', error.v, ' is invalid for the position: ', error.p, '. We expect something like: ', error.e)
             //console.log('onInvalid')

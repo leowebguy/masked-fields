@@ -23,10 +23,12 @@ class Plugin extends BasePlugin
 {
     // Properties
     // =========================================================================
+
     public static $plugin;
 
     // Public Methods
     // =========================================================================
+
     public function init()
     {
         parent::init();
@@ -36,9 +38,6 @@ class Plugin extends BasePlugin
             return;
         }
 
-        /**
-         * Register assets
-         */
         Event::on(
             View::class,
             View::EVENT_BEFORE_RENDER_TEMPLATE,
@@ -50,9 +49,6 @@ class Plugin extends BasePlugin
             }
         );
 
-        /**
-         * Register fields
-         */
         Event::on(
             Fields::class,
             Fields::EVENT_REGISTER_FIELD_TYPES,
@@ -61,9 +57,6 @@ class Plugin extends BasePlugin
             }
         );
 
-        /**
-         * Log info
-         */
         Craft::info(
             'Masked Fields plugin loaded',
             __METHOD__

@@ -14,6 +14,10 @@ use Craft;
 use craft\base\ElementInterface;
 use craft\base\PreviewableFieldInterface;
 use craft\fields\PlainText;
+use Twig\Error\LoaderError;
+use Twig\Error\RuntimeError;
+use Twig\Error\SyntaxError;
+use yii\base\Exception;
 
 /**
  * @property-read null|string $settingsHtml
@@ -26,12 +30,12 @@ class MaskedField extends PlainText implements PreviewableFieldInterface
     /**
      * @var string
      */
-    public $type = 'phoneus';
+    public string $type = 'phoneus';
 
     /**
      * @var string[]
      */
-    private $_types;
+    private array $_types;
 
     // Public Methods
     // =========================================================================
@@ -79,7 +83,11 @@ class MaskedField extends PlainText implements PreviewableFieldInterface
     }
 
     /**
-     * @inheritdoc
+     * @return string|null
+     * @throws Exception
+     * @throws LoaderError
+     * @throws RuntimeError
+     * @throws SyntaxError
      */
     public function getSettingsHtml(): ?string
     {
@@ -92,7 +100,13 @@ class MaskedField extends PlainText implements PreviewableFieldInterface
     }
 
     /**
-     * @inheritdoc
+     * @param mixed $value
+     * @param ElementInterface|null $element
+     * @return string
+     * @throws LoaderError
+     * @throws RuntimeError
+     * @throws SyntaxError
+     * @throws Exception
      */
     public function getInputHtml(mixed $value, ?ElementInterface $element = null): string
     {
