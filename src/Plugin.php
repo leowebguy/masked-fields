@@ -24,7 +24,11 @@ class Plugin extends BasePlugin
     // Properties
     // =========================================================================
 
-    public static $plugin;
+    public static mixed $plugin;
+
+    public bool $hasCpSection = false;
+
+    public bool $hasCpSettings = false;
 
     // Public Methods
     // =========================================================================
