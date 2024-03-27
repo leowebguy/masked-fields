@@ -4,8 +4,7 @@
  *
  * @author     Leo Leoncio
  * @see        https://github.com/leowebguy
- * @copyright  Copyright (c) 2022, leowebguy
- * @license    MIT
+ * @copyright  Copyright (c) 2024, leowebguy
  */
 
 namespace leowebguy\maskedfields\fields;
@@ -24,9 +23,6 @@ use yii\base\Exception;
  */
 class MaskedField extends PlainText implements PreviewableFieldInterface
 {
-    // Public Methods
-    // =========================================================================
-
     /**
      * @var string
      */
@@ -36,9 +32,6 @@ class MaskedField extends PlainText implements PreviewableFieldInterface
      * @var string[]
      */
     private array $_types;
-
-    // Public Methods
-    // =========================================================================
 
     /**
      * @param array $config
@@ -83,11 +76,11 @@ class MaskedField extends PlainText implements PreviewableFieldInterface
     }
 
     /**
-     * @return string|null
      * @throws Exception
      * @throws LoaderError
      * @throws RuntimeError
      * @throws SyntaxError
+     * @return string|null
      */
     public function getSettingsHtml(): ?string
     {
@@ -102,11 +95,11 @@ class MaskedField extends PlainText implements PreviewableFieldInterface
     /**
      * @param mixed $value
      * @param ElementInterface|null $element
-     * @return string
      * @throws LoaderError
      * @throws RuntimeError
      * @throws SyntaxError
      * @throws Exception
+     * @return string
      */
     public function getInputHtml(mixed $value, ?ElementInterface $element = null): string
     {

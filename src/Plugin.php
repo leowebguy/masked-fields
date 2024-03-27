@@ -4,8 +4,7 @@
  *
  * @author     Leo Leoncio
  * @see        https://github.com/leowebguy
- * @copyright  Copyright (c) 2022, leowebguy
- * @license    MIT
+ * @copyright  Copyright (c) 2024, leowebguy
  */
 
 namespace leowebguy\maskedfields;
@@ -13,30 +12,21 @@ namespace leowebguy\maskedfields;
 use Craft;
 use craft\base\Plugin as BasePlugin;
 use craft\events\RegisterComponentTypesEvent;
+use craft\services\Fields;
 use craft\web\View;
 use leowebguy\maskedfields\assets\Assets;
 use leowebguy\maskedfields\fields\MaskedField;
 use yii\base\Event;
-use craft\services\Fields;
 
 class Plugin extends BasePlugin
 {
-    // Properties
-    // =========================================================================
-
-    public static mixed $plugin;
-
     public bool $hasCpSection = false;
 
     public bool $hasCpSettings = false;
 
-    // Public Methods
-    // =========================================================================
-
     public function init()
     {
         parent::init();
-        self::$plugin = $this;
 
         if (!$this->isInstalled) {
             return;
